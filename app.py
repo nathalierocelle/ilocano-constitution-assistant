@@ -100,6 +100,16 @@ def display_sidebar():
             
             Feel free to ask in Ilocano or English - I'll respond in both languages! 🏛️
         """)
+        
+    # Footer in sidebar
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("""
+    <div style="text-align: center; padding: 1rem 0; color: #666; font-size: 11px;">
+        <p style="margin: 0;">Developed by 🐱 <strong>A.I.C.A.T.S.</strong></p>
+        <p style="margin: 0;">(Artificial Intelligence for Constitutional Advancement via Translation Strategy)</p>
+        <p style="margin: 5px 0 0 0;">© 2025</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 def display_chat_interface():
     """Display the main chat interface"""
@@ -147,6 +157,7 @@ def display_chat_interface():
                 st.error(error_msg)
                 st.session_state.messages.append({"role": "assistant", "content": error_msg})
 
+
 def main():
     """Main application function"""
     initialize_session_state()
@@ -162,5 +173,7 @@ def main():
     # Display main chat interface
     display_chat_interface()
 
+
 if __name__ == "__main__":
     main()
+    
