@@ -113,7 +113,7 @@ def display_sidebar():
 
 def display_chat_interface():
     """Display the main chat interface"""
-    st.markdown('<div class="main-header"><h1>🏛️ Ilocano Constitution Chatbot</h1></div>', unsafe_allow_html=True)
+    st.title("🏛️ Ilocano Constitution Chatbot")
     
     # Initialize RAG system if not already done
     if st.session_state.rag_system is None:
